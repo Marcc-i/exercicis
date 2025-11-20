@@ -1,0 +1,155 @@
+/* ----- ESTILO BASE ----- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #e60000, #ff4d4d);
+  color: white;
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin-top: 5px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 30px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #e60000;
+  margin-bottom: 30px;
+}
+
+/* ----- PRODUCTOS ----- */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.producto {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 260px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ----- IMÁGENES CON CAMBIO ----- */
+.producto {
+  position: relative;
+}
+
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Mantiene espacio reservado para las imágenes */
+.producto::before {
+  content: "";
+  display: block;
+  height: 220px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Imagen principal visible por defecto */
+.producto .imagen1 {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Imagen secundaria oculta */
+.producto .imagen2 {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Al pasar el mouse */
+.producto:hover .imagen1 {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.producto:hover .imagen2 {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ----- TEXTO ----- */
+.producto h3 {
+  margin: 10px 0 5px;
+  color: #e60000;
+  font-size: 1.2em;
+}
+
+.producto p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .producto {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  .producto {
+    width: 90%;
+  }
+}
