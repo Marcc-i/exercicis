@@ -24,6 +24,14 @@ header p {
   font-weight: 400;
   letter-spacing: 1px;
 }
+header nav {
+  display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+
+
+}
 
 header a {
     text-decoration: none;

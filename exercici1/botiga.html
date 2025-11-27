@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Productos - Milf Shakes</title>
         <link rel="stylesheet" href="estil.css">
+        <link rel="stylesheet" href="footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body class="index">
         <header>
             <h1>MilfShakes</h1>
             <nav>
-                <a href="index.html">Inici</a>
+                <a href="#">Inici</a>
                 <a href="producte.html">Productes</a>
                 <a href="#">Serveis</a>
                 <a href="#">Contacte</a>
@@ -111,9 +112,51 @@
                 </div>
             </div>
         </section>
+        <section class="contacto">
+    <h2>Formulario de contacto</h2>
+    <form class="formulario">
+        <div class="form-row">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellido" placeholder="Apellido" required>
+            <input type="text" name="pais" placeholder="País" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="asunto" placeholder="Asunto" required>
+        </div>
+        <div class="form-row">
+            <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        <div class="form-row">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</section>
         
-        <footer>
-            <p>&copy; 2025 MSTR. Todos los derechos reservados.</p>
-        </footer>
+    <footer>
+    <div class="footer-container">
+        <p>&copy; 2025 MSTR. Todos los derechos reservados.</p>
+        
+        
+        <div class="footer-pagos">
+            <h4>Métodos de pago</h4>
+            <div class="pagos-logos">
+                <img class="footer-logo" src="img/paypal.webp" width="10px" height="10px" alt="PayPal">
+                <img class="footer-logo" src="img/visa.png" alt="Visa">
+            </div>
+        </div>
+
+        
+        <div class="footer-redes">
+            <h4>Síguenos</h4>
+            <div class="redes-logos">
+                <img class="footer-logo" src="img/instagram.webp" alt="Instagram">
+                <img class="footer-logo" src="img/twitter.png" alt="Twitter">
+                <img class="footer-logo" src="img/facebook.png" alt="Facebook">
+                <img class="footer-logo" src="img/tiktok.png" alt="TikTok">
+            </div>
+        </div>
+    </div>
+</footer>
+
     </body>
 </html>
