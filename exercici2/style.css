@@ -82,7 +82,7 @@ a:hover { text-decoration: underline; }
 }
 .btn-link:hover { filter: brightness(0.95); }
 
-/* Mosaic → Flexbox */
+/* Flexbox */
 .mosaic {
   margin-top: 28px;
   display: flex;
